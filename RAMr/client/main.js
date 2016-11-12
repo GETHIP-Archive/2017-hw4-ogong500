@@ -11,6 +11,13 @@ Template.profile.helpers({
   }
 });
 
+Template.profile.helpers({
+  profile() {
+    let prof = Profiles.findOne({userId: Router.current().params._id });
+    return prof;
+  }
+});
+
 Template.new.events({
   'submit #newProfile'(event) {
   // Prevent default browser form submit

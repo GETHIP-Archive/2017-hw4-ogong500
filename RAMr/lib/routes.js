@@ -17,3 +17,7 @@ Router.route('/new', function () {
 Router.route('/', function() {
   this.render("home");
 });
+
+Router.route('/meme', function() {
+  this.render("meme");
+});
