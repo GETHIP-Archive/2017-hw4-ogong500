@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 import {Profiles} from '../imports/api/profiles.js';
+import {Memes} from '../imports/api/profiles.js';
 import './main.html';
 
 Template.profile.helpers({
@@ -11,9 +12,9 @@ Template.profile.helpers({
   }
 });
 
-Template.profile.helpers({
-  profile() {
-    let prof = Profiles.findOne({userId: Router.current().params._id });
+Template.memes.helpers({
+  memes() {
+    let prof = Memes.findOne({userId: Router.current().params._id });
     return prof;
   }
 });

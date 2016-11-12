@@ -1,4 +1,5 @@
 export const Profiles = new Mongo.Collection('profiles');
+export const Memes = new Mongo.Collection('memes');
 
 Comment_Schema = new SimpleSchema({
   posterId: {
@@ -39,3 +40,4 @@ Profiles.schema = new SimpleSchema({
 });
 
 Profiles.attachSchema(Profiles.schema);
+Memes.attachSchema(Memes.schema);
