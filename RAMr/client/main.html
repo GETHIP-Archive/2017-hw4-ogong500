@@ -1,0 +1,79 @@
+<head>
+  <title>RAMr</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">RAMr</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class><a href="/">Home</a></li>
+            <li class><a href="/new">More RAM</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+</body>
+
+<template name="home">
+    <div class="container" id="homeContainer">
+      <h1>
+         <img src="https://static2.fjcdn.com/comments/5732078+_296bed76be410c0ce865b7458264597d.jpg" name="aboutme" width="690" height="420" border="0" class="img-rectangle">
+       </h1>
+    </div>
+</template>
+
+<template name="profile">
+  <div class="container" id="profileContainer">
+    <center>
+      <img src="https://www.defit.org/wp-content/uploads/2012/01/ram.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle">
+      <h3 class="media-heading">{{profile.ramSize}} {{profile.lastName}} <small>{{profile.age}}</small></h3>
+      <span><strong>Best RAM: </strong></span>
+          <span class="label label-info">Download</span>
+          <span class="label label-info">Sum</span>
+          <span class="label label-info">More</span>
+          <span class="label label-info">RAM</span>
+    </center>
+      <hr>
+      <center>
+      <p class="text-left"><strong>Bio: </strong><br>
+          {{profile.bio}}
+      </p>
+      <br>
+    </center>
+  </div>
+</template>
+
+<template name="new">
+  <div class="container" id="newContainer">
+      <form id="newProfile">
+        <div class="form-group">
+          <label for="ramSize">RAM Size</label>
+          <input type="text" class="form-control" id="ramSize" placeholder="16 GB">
+        </div>
+        <div class="form-group">
+          <label for="lastName">More RAM?</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Of Course">
+        </div>
+        <div class="form-group">
+          <label for="age">Favorite Rapper</label>
+          <input type="text" class="form-control" id="age" placeholder="Kanye West">
+        </div>
+        <div class="form-group">
+          <label for="bio">Favorite RAM brand?</label>
+          <input type="text" class="form-control" id="bio" placeholder="RAMr">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+  </div>
+</template>
